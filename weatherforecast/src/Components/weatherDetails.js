@@ -18,9 +18,9 @@ const WeatherDetails = ({dt, temp_min, temp_max, main, icon}) => {
           {date.toLocaleDateString()} - {date.toLocaleTimeString()}
         </p>
         {/* minimum temperature */}
-        <p>Min: {temp_min}</p>
+        <p>Min: {parseFloat(temp_min - 273.15).toFixed(2)} °C</p>
         {/* maximum temperature */}
-        <p>Max: {temp_max}</p>
+        <p>Max: {parseFloat(temp_max - 273.15).toFixed(2)} °C</p>
       </Card.Body>
     </Card>
   );
