@@ -1,6 +1,9 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
 
+/* 
+Component which receives date, minimum & maximum temperature, 
+climate and icon details and renders on screen */
 const WeatherDetails = ({dt, temp_min, temp_max, main, icon}) => {
   // create a date object with Date class constructor
   const date = new Date(dt);
@@ -17,9 +20,9 @@ const WeatherDetails = ({dt, temp_min, temp_max, main, icon}) => {
         <p>
           {date.toLocaleDateString()} - {date.toLocaleTimeString()}
         </p>
-        {/* minimum temperature */}
+        {/* minimum temperature returned in kelvin unit then converted to degree */}
         <p>Min: {parseFloat(temp_min - 273.15).toFixed(2)} °C</p>
-        {/* maximum temperature */}
+        {/* maximum temperature returned in kelvin unit then converted to degree*/}
         <p>Max: {parseFloat(temp_max - 273.15).toFixed(2)} °C</p>
       </Card.Body>
     </Card>

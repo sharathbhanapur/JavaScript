@@ -6,6 +6,8 @@ import FetchURL from './hooks/FetchURL';
 import {API_KEY, API_BASE_URL} from './API/config'
 import WeatherList from './Components/WeatherList';
 
+/* Main component which inturn used LocationSelect and WeatherList components
+ to display weather details for given location */
 
 function App() {
   const {data, error, isLoading, setURL} = FetchURL();

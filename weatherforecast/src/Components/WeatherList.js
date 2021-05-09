@@ -2,6 +2,7 @@ import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import WeatherDetails from './weatherDetails'
 
+/* Component used to show weather details for given location which time interval of 3 hours */
 const WeatherList = ({weathers}) => {
     return (
         <Row>

@@ -1,6 +1,10 @@
+/* 
+    Location component includes controls which renders from react bootstrap.
+    Enter key down event used to get the weather details for given location
+    */
+
 import React , {useState} from 'react';
 import {Row, Col, FormControl, Button} from 'react-bootstrap';
-import {API_BASE_URL, API_KEY} from '../API/config'
 
 const LocationSelect = ({onSearch}) => {
     const[locate, setLocation] = useState('');
